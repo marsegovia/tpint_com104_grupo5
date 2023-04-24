@@ -1,0 +1,92 @@
+*{padding: 0;
+    margin: 0;
+}
+
+.header{
+    width: 100%;
+    height: 90px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+    font-family: "Nunito", sans-serif;
+    color: #3D84A8;
+}
+.navbar{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo{
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-principal{
+    width: 100%;
+    height: 600px;
+}
+
+.banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    display: grid;
+    color: white;
+}
+
+.formulario_form{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    color: #3D84A8;
+}
+
+.input1{
+    height: 50px; 
+    border-radius: 20px;
+}
+.input2{
+    height: 50px; 
+    border-radius: 20px;
+}
+
+.input3{
+    height: 50px; 
+    border-radius: 20px;
+}
+
+
+#boton{
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    border-color: #3D84A8;
+    background-color: #3D84A8;
+    color: white;
+}
+
+.form-control{
+    height: 20px;
+}
+
+.col{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 100px;
+}

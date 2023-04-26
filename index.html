@@ -5,51 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/789ca628aa.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/789ca628aa.js" crossorigin="anonymous"></script> 
     <title>Tp Integrador</title>
 </head>
 <body>
+    <script>
+        function alerta()
+        {
+            alert("Se envio su consulta");
+        }
+    </script>
+
+
     <div class="header">
-      <img class="logo" src="./logo.png" />
-      <nav class="navbar">
-        <li>Promociones</li>
-        <li>Información de contacto</li>
-        <li>Opciones</li>
-        <li ></button type="button" class="boton-login">Login</button></li>
-      </nav>
+    <img class="logo" src="./logo.png" />
+    <nav class="navbar">
+        <li><a class="enlace" href="#">Acerca de Nosotros</a></li>
+        <li><a class="enlace" href="">Formulario de contacto</a></li>
+        <li><a class="enlace" href="">Formulario de reclamo</a></li>
+        <li><a href="./login.html"> <button class="boton" type="submit">Login</button></a></li>
+    </nav>
     </div>
-    <img class="banner-principal" src="./banner56.jpg" alt="">
+    <img class="banner-principal" src="./banner200.webp" alt="">
     <div class="banner"> 
-        <h3> ORGANIZACION</h3>
-        <p>Somos una empresa iniciando en el mundo de la tecnologia, comenzamos en el 2023 y nos gustaria que 
-            nos acompañes en nuestro recorrido. Nuestro objetivo es que seas cliente de nuestra marca, y estes a gusto con nuestros productos</p>
+        <h3 class="texto1">ELECTROMAX</h3>
+        <p class="texto3">Conecta con el mundo, con nuestros dispositivos</p>
     </div> 
 
-    <div class="col">
-        <h1>Formulario de Contacto</h1>
-        <form action="#" class="formulario">
-            <div class="input1">
-                <label for="name" class="form-label">Nombre y Apellido</label>
-                <input type="name" name="Nombre" class="form-control" value="Nombre y Apellido">
+    <div class="row3">
+        <h2 class="texto6">Acerca de nosotros</h2>
+    </div>
+
+    <div class="row2">
+        <div class="Mision">
+            <h2>Nuestra Mision</h2>
+            <p id="mision">Brindar soluciones en tecnología informática; para contribuir al desarrollo integral <br>
+            de las empresas e instituciones, 
+            brindando soporte técnico eficiente y oportuno.</p>
+        </div>
+
+        <div class="Vision">
+            <h2>Nuestra Vision</h2>
+            <p id="vision">Llegar a ser un referente como empresa de desarrollo, en los productos y servicios ofrecidos.<br>
+            Diseñar y desarrollar servicios y soluciones software diferenciales, que aporten un gran valor.<br> 
+            Ser una empresa atractiva, como proveedor tecnológico y también como lugar de trabajo.</p>
+        </div>
+    </div>
+
+
+<h4 id="personal_empresa">Personal de la empresa</h4>
+<div id="listado-personas">
+</div>
+
+<!--Formulario de contacto-->   
+<div class="color-fondo-formulario">
+    <div class="container">
+        
+        <h2 class="texto4">Formulario de Contacto</h2>
+        <form action="" class="form needs-validation" id="form" novalidate >
+            <div>
+                <span><i class="fa-solid fa-user"></i></span>
+                <label class="form-label" for="name">Nombre y Apellido</label>
+                <input class="form-control" name="name" type="text" id="name" placeholder="Nombre y Apellido" required>
             </div>
 
             <div>
-            <div class="input2">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" name="Email" class="form-control" value="Email">
+                <span><i class="fa-solid fa-envelope"></i></span>
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control" name="email" type="text" id="email" placeholder="Email" required>
             </div>
 
-            <div class= "input3">
-                <label for="number" class="form-label">Telefono</label>
-                <input type="number" name="Numero" class="form-control" value="Numero">
+            <div>
+                <span><i class="fa-solid fa-phone"></i></span>
+                <label class="form-label" for="number">Telefono</label>
+                <input class="form-control" name="number" type="number" id="number" placeholder="Telefono" required>
             </div>
             
             <div>
-            <label for="name" class="prov">Provincia</label>
-            <select name="provincia" id="Prov">
-                <option value="select">Seleccione una provincia</option>
+                <span><i class="fa-solid fa-city"></i></span>
+            <label class="form-label" for="name" class="prov">Provincia</label>
+            <select required class="form-control" name="provincia" id="Prov" >
+                <option class="texto-de-formulario-3" value="select">Seleccione una provincia</option>
                 <option value="BsAs">Buenos Aires</option>
                 <option value="T">Tucuman</option>
                 <option value="SE">Santiago del Estero</option>
@@ -57,16 +94,147 @@
                 <option value="Er">Entre Rios</option>
             </select>
             </div>
+            <br>
+            <label class="form-label" for="text"> Comentario</label>
+            <textarea required class="form-control" cols="50" row="15" name="comentario" placeholder="Ingrese su comentario"></textarea>
+            <br>
+            <button id="boton" type="submit" class="btn btn-primary" onclick="alerta()">Enviar Consulta</button>
+            <div class="invalid-feedback">
+                <p id="p"> Se requieren campos </p>
+            </div>
         </form>
-            <br>
-            <textarea cols="30" row="5" name="comentario">Comentario...</textarea>
-            <br>
-            <button id="boton" type="submit" class="btn btn-primary">Enviar Consulta</button>
-
-        
     </div>
-    
+</div>
 
-    
+<div class="extra">
+    <p class="texto">Si tiene algun problema con el producto, rellene el siguiente formulario de reclamo</p>
+</div>
+
+
+    <div class="container-fluid">
+	<div class="row justify-content-center bg-gradient">
+		<div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                <h2 id="heading">Formulario de Reclamo</h2>
+                <p>Completa todos los campos del formulario para ir al siguiente paso.</p>
+
+                <form id="msform">
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                        <li class="active" id="account"><strong>Cuenta</strong></li>
+                        <li id="personal"><strong>Producto</strong></li>
+                        <li id="confirm"><strong>Finalizar</strong></li>
+                    </ul>
+                    <div class="progress">
+                    	<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                	</div>
+                    <br>
+                    <!-- fieldsets -->
+                    <fieldset>
+                        <div class="form-card">
+                        	<div class="row">
+                        		<div class="col-7">
+                            		<h2 class="fs-title">Información de la cuenta:</h2>
+                            	</div>
+                            	<div class="col-5">
+                            		<h2 class="steps"></h2>
+                            	</div>
+                            </div>
+                            <label class="fieldlabels">Correo electrónico: *</label>
+                            <input type="email" name="email" placeholder="example@direccion.com"/>
+                            <label class="fieldlabels">Usuario: *</label>
+                            <input type="text" name="uname" placeholder="Coloque su usuario"/>
+                            <label class="fieldlabels">Contraseña: *</label>
+                            <input type="password" name="pwd" placeholder="Coloque su contraseña"/>
+                            <label class="fieldlabels">Confirmar contraseña: *</label>
+                            <input type="password" name="cpwd"/>
+                        </div>
+                        <input type="button" name="next" class="next action-button" value="Continuar"/>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                        		<div class="col-7">
+                            		<h2 class="fs-title">Informacion del Producto:</h2>
+                            	</div>
+                            	<div class="col-5">
+                            		<h2 class="steps">Paso 2 - 4</h2>
+                            	</div>
+                            </div>
+
+                            <div>
+                            <label class="form-label">Modelo/Marca: *</label>
+                            <select class="form-control" name="" id="">
+                                <option value="select">Seleccione una Marca</option>
+                                <option value="">Asus</option>
+                                <option value="">AMD</option>
+                                <option value="">Intel</option>
+                                <option value="">Gigabyte</option>
+                                <option value="">Kingston</option>
+                            </select>
+                            </div>
+
+                            <div>
+                            <label class="form-label">Tipo de Producto: *</label>
+                            <select class="form-control" name="" id="">
+                                <option value="select">Seleccione el Tipo de Producto</option>
+                                <option value="">CPU</option>
+                                <option value="">Memoria RAM</option>
+                                <option value="">Coolers</option>
+                                <option value="">Motherboards</option>
+                                <option value="">Discos</option>
+                            </select>
+                            </div>
+
+                            <div>
+                                <label class="form-label" for="text">Detalle los daños del producto: *</label>
+                                <textarea class="form-control" cols="70" row="15" name="comentario">Ingrese su mensaje</textarea>
+                            </div>
+                        <input type="button" name="next" class="next action-button" value="Next"/>
+                        <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="form-card">
+                        	<div class="row">
+                        		<div class="col-7">
+                            		<h2 class="fs-title">Finish:</h2>
+                            	</div>
+
+                            	<div class="col-5">
+                            		<h2 class="steps">Step 4 - 4</h2>
+                            	</div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+	</div>
+    </div>
+
+
+    <!--Footer-->
+    <footer class="foot">
+        <div class="foot1">
+            <p class="texto7"> <a class="enlace1" href="">Terminos y condiciones</a> </p>
+            <p class="texto8"><a class="enlace1" href="">Contactanos</a></p>
+            
+            <ul class="menu1">
+                <span class="ig"><i class="fa-brands fa-instagram"></i></span>
+                <span class="fb"><i class="fa-brands fa-facebook"></i></span>
+                <span class="ln"><i class="fa-brands fa-linkedin"></i></span>
+            </ul>
+        
+        </div> 
+        <div class="linea">
+
+        </div>
+        <div class="foot2">
+            <p class="texto9">&copy;2023 Todos los derechos reservados - Grupo5</p>
+        </div>      
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./js/formulario.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/validate.js"></script>
 </body>
-</html>

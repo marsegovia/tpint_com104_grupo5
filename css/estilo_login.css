@@ -1,0 +1,42 @@
+.col{
+    background-color: darkgray;
+}
+#enlace{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    color: #498CAE;
+}
+
+.titulo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 28px;
+    color: #498CAE;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.boton{
+    font-size: 20px;
+    border-radius: 5px 5px;
+    padding: 5px 5px;
+    background-color: #3D84A8;
+    border-color: #3D84A8;
+    color: white;
+}
+.form-label{
+    border-color: #C4C4C4;
+}
+
+@media (max-width: 780px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .side{
+      display: none;
+    }
+}
